@@ -1,0 +1,19 @@
+.button
+{
+  position: absolute;
+  top: 1%;
+  right:1%
+}
+
+table
+{
+  text-align: center;
+  position: absolute;
+  top:10%;
+  left:15%;
+}
+
+td
+{
+  text-align: left;
+}

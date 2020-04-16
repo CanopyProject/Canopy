@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canopy Project Demo</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+	<style>
+		.main{
+			display: inline-flex;
+		}
+		body{
+			background-image: url(static/bg.jpg);
+		}
+	</style>
+</head>
+<body>
+<div align="center">
+  <br>
+	<br>
+  <h1>The Canopy Project</h1>
+	<br>
+	<br>
+</div>
+<div class="main" style="margin:40px 20px 50px 50px; ">
+<form method="POST" enctype="multipart/form-data" action="/success.html/">
+    <select name="country">
+        <option value="0" select hidden>Choose Country</option>
+        <option value="ARG">Argentina</option>
+        <option value="BOL">Bolivia</option>
+        <option value="BRA">Brazil</option>
+        <option value="CHL">Chile</option>
+        <option value="COL">Colombia</option>
+        <option value="ECU">Ecuador</option>
+        <option value="GUY" hidden>Guyana</option>
+        <option value="PRY">Paraguay</option>
+        <option value="PER">Peru</option>
+        <option value="SUR" hidden>Suriname</option>
+        <option value="URY" hidden>Uruguay</option>
+        <option value="VEN">Venezuela</option>
+    </select>
+
+    <p>OR</p>
+
+    <label for="shapefileInput">Upload Shapefile</label>
+    <input type="file" id="shapefileInput" name="shapefileInput">
+
+    <br>
+    <br>
+    <br>
+    <label for="function">Select function(s)</label>
+    <br>
+    <select name="function" multiple>
+        <option value="0" select hidden>Choose Analysis</option>
+        <option value="1">Number of Observations</option>
+        <option value="2" hidden>Time of Year</option>
+        <option value="3" hidden>Density of Observations</option>
+        <option value="4">Standard Deviation of Density of Observations</option>
+        <option value="5">Average Canopy Height</option>
+        <option value="6">Standard Deviation of Canopy Height</option>
+        <option value="7">Data Quality</option>
+        <option value="8" hidden>Classify Forest Types</option>
+        <option value="9">Raw Data (No Analysis)</option>
+    </select>
+    <br>
+    <br>
+    <br>
+    <br>
+    <input type="email" id="emailInput" name="emailInput" placeholder="Enter email address">
+    <br>
+    <br>
+    <input type="submit" value="confirm">
+</form>
+
+</div>
+<div class="main" align="right" >
+<br>
+<!-- plain picture of south america -->
+<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d39950127.073273465!2d-46.63632217625031!3d-30.198129370360146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1575848425515!5m2!1sen!2sus" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe> -->
+
+<br>
+</div>
+
+</body>
+</html>
