@@ -116,7 +116,6 @@ def readShapefile():
             os.chdir(THIS_FOLDER)
         # Send <<currentShapefile>> (selected variable) to Monsoon here
         # Demo stats functions here also
-        ObList = [1, 21, 4, 4, 5, 1, 54, 75, 2, 12, 43, 2, 12, 21, 34]
         Area=100
 
         #list store the result
@@ -128,8 +127,10 @@ def readShapefile():
 
         data = gpd.read_file(fp)
         height_array = []
+        ObList = []
         for index, row in data.iterrows():
             height_array.append(row['rh100'])
+            ObList.append(row['l2b_QF'])
 
         if "1" in functionList:
             result[0] = StatisticFunctions.NumberofObservations(ObList)
