@@ -42,7 +42,7 @@ def readShapefile():
     if request.method == "POST":
         if request.files["shapefileInput"].filename == "":
             if countryVal == "0":
-                return render_template("",204)
+                return ("",204)
             else:
                 selectedCountry = request.form["country"]
                 fp = os.path.join(THIS_FOLDER, 'unpack')
