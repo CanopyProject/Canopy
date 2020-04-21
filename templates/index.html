@@ -21,55 +21,166 @@
 	<br>
 	<br>
 </div>
-<div class="main" style="margin:40px 20px 50px 50px; ">
-<form method="POST" enctype="multipart/form-data" action="/success.html/">
-    <select name="country">
-        <option value="0" select hidden>Choose Country</option>
-        <option value="ARG">Argentina</option>
-        <option value="BOL">Bolivia</option>
-        <option value="BRA">Brazil</option>
-        <option value="CHL">Chile</option>
-        <option value="COL">Colombia</option>
-        <option value="ECU">Ecuador</option>
-        <option value="GUY" hidden>Guyana</option>
-        <option value="PRY">Paraguay</option>
-        <option value="PER">Peru</option>
-        <option value="SUR" hidden>Suriname</option>
-        <option value="URY" hidden>Uruguay</option>
-        <option value="VEN">Venezuela</option>
-    </select>
+<br><br><br>
+<div class="main">
+<table>
+  <tr>
+    <td valign="top">
+      <br><br><br>
+      <form method="POST" enctype="multipart/form-data" action="/success.html/">
+          <select name="country">
+              <option value="0" select hidden>Choose Country</option>
+              <option value="ARG">Argentina</option>
+              <option value="BOL">Bolivia</option>
+              <option value="BRA">Brazil</option>
+              <option value="CHL">Chile</option>
+              <option value="COL">Colombia</option>
+              <option value="ECU">Ecuador</option>
+              <option value="GUY" hidden>Guyana</option>
+              <option value="PRY">Paraguay</option>
+              <option value="PER">Peru</option>
+              <option value="SUR" hidden>Suriname</option>
+              <option value="URY" hidden>Uruguay</option>
+              <option value="VEN">Venezuela</option>
+          </select>
 
-    <p>OR</p>
+          <p>OR</p>
 
-    <label for="shapefileInput">Upload Shapefile</label>
-    <input type="file" id="shapefileInput" name="shapefileInput">
+          <label for="shapefileInput">Upload Shapefile</label>
+          <input type="file" id="shapefileInput" name="shapefileInput">
 
-    <br>
-    <br>
-    <br>
-    <label for="function">Select function(s)</label>
-    <br>
-    <select name="function" multiple>
-        <option value="0" select hidden>Choose Analysis</option>
-        <option value="1">Number of Observations</option>
-        <option value="2" hidden>Time of Year</option>
-        <option value="3" hidden>Density of Observations</option>
-        <option value="4">Standard Deviation of Density of Observations</option>
-        <option value="5">Average Canopy Height</option>
-        <option value="6">Standard Deviation of Canopy Height</option>
-        <option value="7">Data Quality</option>
-        <option value="8" hidden>Classify Forest Types</option>
-        <option value="9">Raw Data (No Analysis)</option>
-    </select>
-    <br>
-    <br>
-    <br>
-    <br>
-    <input type="email" id="emailInput" name="emailInput" placeholder="Enter email address">
-    <br>
-    <br>
-    <input type="submit" value="confirm">
-</form>
+          <br>
+          <br>
+          <br>
+          <label for="function">Select function(s)</label>
+          <br>
+          <select name="function" multiple>
+              <option value="0" select hidden>Choose Analysis</option>
+              <option value="1">Number of Observations</option>
+              <option value="2" hidden>Time of Year</option>
+              <option value="3" hidden>Density of Observations</option>
+              <option value="4">Standard Deviation of Density of Observations</option>
+              <option value="5">Average Canopy Height</option>
+              <option value="6">Standard Deviation of Canopy Height</option>
+              <option value="7">Data Quality</option>
+              <option value="8" hidden>Classify Forest Types</option>
+              <option value="9">Raw Data (No Analysis)</option>
+          </select>
+          <br>
+          <br>
+          <br>
+          <br>
+          <input type="email" id="emailInput" name="emailInput" placeholder="Enter email address">
+          <br>
+          <br>
+          <input type="submit" value="confirm">
+      </form>
+      <h3><b>HOW TO:</b></h3>
+      1. <b>Choose the country</b>
+      <br>
+          &emsp;&emsp;Select which country you want to analyze from the dropdown menu.
+          <br>
+          &emsp;&emsp;The option to upload your own shapefile is currently under construction.
+      <br><br>
+      2. <b>Select functions</b>
+      <br>
+          &emsp;&emsp;Choose which functions you want to be used on the country you chose by selecting them.
+          <br>
+          &emsp;&emsp;To select mutiple, hold down the appropriate key and select each function:
+          <br>
+              &emsp;&emsp;&emsp;&emsp;On Mac: hold down the "command" key
+              <br>
+              &emsp;&emsp;&emsp;&emsp;On Windows: hold down the "control" key
+      <br><br>
+      3. <b>Enter email</b>
+      <br>
+          &emsp;&emsp;Enter a valid email address in the text box.
+      <br><br>
+      4. <b>Hit "confirm"</b>
+      <br>
+      &emsp;&emsp;Why do we need your email?
+      <br>
+      &emsp;&emsp;&emsp;&emsp;We use your email to send your results to you, because some of the functions may
+      <br>
+      take a long time to compute depending on the area chosen.
+      <br>
+      &emsp;&emsp;&emsp;&emsp;It will not be used for anything else, we promise!
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+  <br>
+  <h3><b>FUNCTIONS:</b></h3>
+  What functions are there, and what do they do?
+  <br><br>
+  <b>Number of Observations</b>
+  <br>
+      &emsp;&emsp;Provides the number of lidar pings that were performed in that area.
+  <br><br>
+  <b>Standard Deviation of Density of Observations</b>
+  <br>
+      &emsp;&emsp;Returns the standard deviation performed on the density of observations, density being the number of observations performed over the area.
+  <br><br>
+  <b>Average Canopy Height</b>
+  <br>
+      &emsp;&emsp;Averages the height of canopies over the entire area.
+  <br><br>
+  <b>Standard Deviation of Canopy Height</b>
+  <br>
+      &emsp;&emsp;The standard deviation of the canopy heights found over the entire area.
+  <br><br>
+  <b>Data Quality</b>
+  <br>
+      &emsp;&emsp;Provides the average quality of the data in each observation.
+      <br>
+      &emsp;&emsp;The range will be from 0 - 1, where 0 is poor data and 1 is good data.
+  <br><br>
+  <b>Raw Data (No Analysis)</b>
+  <br>
+      &emsp;&emsp;Returns the unpacked GEDI files for the area requested.
+      <br>
+      &emsp;&emsp;These files will be a shapefile (and all of the other associated files alongside the .shp) containing the observations and data only in that area.
+  <br><br>
+  <b>How do they work?</b>
+  <br><br>
+  All of these functions are currently done using standard Python NumPy math functions.
+  <br><br>
+  <b>Number of Observations</b>
+  <br>
+      &emsp;&emsp;Each segment of data can be counted as one observation.
+  <br><br>
+  <b>Standard Deviation of Density of Observations</b>
+  <br>
+      &emsp;&emsp;NumPy's std function performed on the number of observations divided by the area.
+  <br><br>
+  <b>Average Canopy Height</b>
+  <br>
+      &emsp;&emsp;NumPy's mean function performed on a list of the "rh100" values.
+      <br>
+      &emsp;&emsp;The values with that beam key is the height from the ground to the top of the vegetation found in that observation.
+  <br><br>
+  <b>Standard Deviation of Canopy Height</b>
+  <br>
+      &emsp;&emsp;NumPy's std function performed on the list of the "rh100" values.
+  <br><br>
+  <b>Data Quality</b>
+  <br>
+      &emsp;&emsp;NumPy's mean function performed on a list of the "l2b_quality_flag" values.
+      <br>
+      &emsp;&emsp;The values found with that beam key will be either 0 or 1 to indicate the quality of the data in that observation.
+  <br><br>
+  <b>Raw Data (No Analysis)</b>
+  <br>
+      &emsp;&emsp;We process GEDI data by finding and separating out the observations that are in the area chosen.
+      <br>
+      &emsp;&emsp;This results in a shapefile that has a GeoPandas GeoDataFrame that allows for easy analysis.
+  <br><br>
+</td>
+</table>
 
 </div>
 <div class="main" align="right" >
