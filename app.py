@@ -88,9 +88,21 @@ def readShapefile():
             # Take in file string
             currentShapefile = request.files["shapefileInput"]
 
+            # set the folder that the unpacked files will go into
+            folder = "unpack/unpacked_temp"
+            fp = os.path.join(THIS_FOLDER, folder)
+            # check if the folder exists
+            # if it doesn't, make it
+            if not os.path.exists(fp):
+                os.mkdir(fp)
+
             # Change directory to temporary folder
-            fp = os.path.join(THIS_FOLDER, 'shapefiles/temporary')
-            os.chdir(fp)
+            fp = os.path.join(THIS_FOLDER, 'tempShapefile')
+            # check if the folder exists
+            # if it doesn't, make it before moving into it
+            if not os.path.exists(fp):
+                os.mkdir(fp)
+            os.chdir(fp)   
 
             # Save zip file to current directory
             currentShapefile.save(currentShapefile.filename)
